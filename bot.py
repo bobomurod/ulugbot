@@ -18,6 +18,15 @@ def caps(bot, update, args):
 caps_handler = CommandHandler('caps', caps, pass_args=True)
 dispatcher.add_handler(caps_handler)
 
+def son(bot, update, args):
+        s = int(args)
+        bot.send_message(chat_id=update.message.chat_id, text="Siz "+s+" ni kiritdingiz")
+
+son_handler = CommandHandler('son', son, pass_args=True)
+dispatcher.add_handler(son_handler)
+
+
+
 # def some_func(args):
 #         myArg = args
 #         bot.send_message(chat_id=update.message.chat_id, text=myArg)
