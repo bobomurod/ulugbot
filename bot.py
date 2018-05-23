@@ -17,5 +17,12 @@ def caps(bot, update, args):
 caps_handler = CommandHandler('caps', caps, pass_args=True)
 dispatcher.add_handler(caps_handler)
 
+def some_func(args):
+        myArg = args
+        bot.send_message(chat_id=update.message.chat_id, text=myArg)
+
+some_func_handler = MessageHandler(unknown)
+dispatcher.add_handler(some_func_handler)
+
 updater.start_polling()
 
