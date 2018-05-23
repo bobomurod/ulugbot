@@ -20,7 +20,7 @@ dispatcher.add_handler(caps_handler)
 
 def son(bot, update, args):
         s = int(' '.join(args))
-        bot.send_message(chat_id=update.message.chat_id, text="Siz "+s+" ni kiritdingiz")
+        bot.send_message(chat_id=update.message.chat_id, text="Siz "+str(s)+" ni kiritdingiz")
 
 son_handler = CommandHandler('son', son, pass_args=True)
 dispatcher.add_handler(son_handler)
